@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cfM-t8-aM4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LdI-47-8DH">
+            <objects>
+                <navigationController id="cfM-t8-aM4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a7g-MQ-E9a">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MDt-TE-K2W" kind="relationship" relationship="rootViewController" id="KgH-cK-9bU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fs9-6p-dme" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="-1080"/>
+        </scene>
+        <!--Github User Search-->
+        <scene sceneID="3FB-vE-LYm">
+            <objects>
+                <viewController id="MDt-TE-K2W" customClass="ViewController" customModule="userSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Liu-DZ-Zsy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AAD-AD-r9I">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="FlK-7J-koP" detailTextLabel="hyu-z7-1lh" style="IBUITableViewCellStyleSubtitle" id="qL1-hD-j5c">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qL1-hD-j5c" id="v4V-Ft-Zla">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FlK-7J-koP">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hyu-z7-1lh">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AAD-AD-r9I" secondAttribute="trailing" id="VLO-AZ-1Ze"/>
+                            <constraint firstItem="AAD-AD-r9I" firstAttribute="top" secondItem="c4M-oU-iZ7" secondAttribute="top" id="fPZ-yW-8bd"/>
+                            <constraint firstItem="AAD-AD-r9I" firstAttribute="leading" secondItem="Liu-DZ-Zsy" secondAttribute="leading" id="fVM-7D-7OK"/>
+                            <constraint firstItem="AAD-AD-r9I" firstAttribute="bottom" secondItem="c4M-oU-iZ7" secondAttribute="bottom" id="zb0-YC-Qu4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c4M-oU-iZ7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Github User Search" id="sGP-Vf-2Rs"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="dQI-4k-Ven" id="Oyp-eV-trH"/>
+                        <outlet property="tableView" destination="AAD-AD-r9I" id="WwW-oY-hXT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onf-bJ-zfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="dQI-4k-Ven">
+                    <connections>
+                        <outlet property="delegate" destination="MDt-TE-K2W" id="alQ-60-DGG"/>
+                        <outlet property="searchContentsController" destination="MDt-TE-K2W" id="cgV-JS-hqo"/>
+                        <outlet property="searchResultsDataSource" destination="MDt-TE-K2W" id="gm1-l8-ngy"/>
+                        <outlet property="searchResultsDelegate" destination="MDt-TE-K2W" id="Jwl-ru-G0e"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="286" y="-1081"/>
+        </scene>
+    </scenes>
+</document>
